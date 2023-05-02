@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+/* Reset estilos*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #eaeaeb;
+  font-family: "Heebo", sans-serif;
+  color: #0d0f20;
+}
+
+a {
+  color: #614ca0;
+  text-decoration: none;
+}
+
+/* Elementos comunes */
+
+.icon {
+  display: inline-block;
+  height: 5vw;
+}
+
+.small-icon {
+  display: inline-block;
+  height: 1.6vw;
+  margin-right: 4px;
+}
+
+.icon img {
+  height: 50%;
+}
+
+.wrapper {
+  max-width: 1100px;
+  padding: 0px 4vw;
+  margin: 0px auto;
+}
+
+/* Cabecera */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.3rem;
+  margin: 0px;
+}
+
+.logo .icon {
+  margin-right: 6px;
+}
+
+header .wrapper {
+  display: grid;
+  grid-template-columns: 2fr 3.5fr 2fr;
+  align-items: center;
+}
+
+.header button {
+  border: none;
+  background: transparent;
+}
+
+.header {
+  background-color: white;
+  padding: 1rem 0px;
+}
+
+/* Menu */
+
+.menu_bar {
+  display: none;
+}
+
+header {
+  width: 100%;
+}
+header .sesion {
+  justify-self: end;
+}
+
+.logo p {
+  display: block;
+  font-size: 14px;
+}
+
+.logout {
+  color: white;
+  display: block;
+  padding: 10px 10px;
+  border: none;
+  font-size: 12px;
+  background-color: #e53f04;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.logout:hover {
+  background-color: #f4660b;
+}
+
+header nav {
+  justify-self: center;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  position: relative;
+}
+
+header nav li a {
+  display: block;
+  text-decoration: none;
+  padding: 0 20px 0 0;
+}
+
+header nav ul li a span {
+  margin-right: 10px;
+}
+
+header nav ul l li a {
+  display: block;
+}
+
+.frm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  align-self: center;
+}
+.form {
+  background-color: white;
+  width: 400px;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+}
+
+.title {
+  font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.inputContainer {
+  position: relative;
+  height: 45px;
+  width: 90%;
+  margin-bottom: 17px;
+}
+
+.input {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  border: 1px solid #392193;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 0 20px;
+  outline: none;
+  background: none;
+  z-index: 1;
+}
+
+::placeholder {
+  color: transparent;
+}
+.label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 0 4px;
+  background-color: white;
+  color: #dadce0;
+  font-size: 16px;
+  transition: 0.5s;
+  z-index: 0;
+}
+
+.submitBtn {
+  display: inline;
+  margin-left: auto;
+  padding: 15px 30px;
+  border: none;
+  background-color: #392193;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.submitBtn:hover {
+  background-color: #988ace;
+  transform: translateY(-2px);
+}
+.input:focus + .label {
+  top: -7px;
+  left: 3px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
+  color: #392193;
+}
+
+.input:focus {
+  border: 2px solid #392193;
+}
+input:not(:placeholder-shown) + .label {
+  top: -7px;
+  left: 3px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn {
+  display: block;
+  width: 20%;
+  padding: 15px 15px;
+  border: none;
+  background-color: rgb(60, 207, 126);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgb(96, 197, 141);
+}
+
+.formBtn {
+  display: inline;
+  margin-left: auto;
+  padding: 15px 30px;
+  border: none;
+  background-color: #392193;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.actionFrm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+table {
+  margin-top: 40px;
+}
+table td {
+  position: relative;
+  padding: 10px;
+  border: grey 1px solid;
+  align-items: center;
+  text-align: center;
+}
+
+table th {
+  color: #eaeaeb;
+  background-color: #614ca0;
+  padding: 10px;
+}
+.actionList {
+  float: right;
+  display: block;
+  justify-content: left;
+  align-items: left;
+  margin-left: 60px;
+  margin-top: 40px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+}
+
+.consultarNotaList {
+  float: right;
+  display: block;
+  justify-content: left;
+  align-items: left;
+  margin-left: 60px;
+  margin-top: 120px;
+}
+
+.content {
+  width: 60%;
+  padding-top: 50px;
+  padding-left: 20%;
+  padding-right: 20%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-self: center;
+}
+
+.content .polaroids {
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  row-gap: 60px;
+  align-items: center;
+}
+
+.polaroid {
+  justify-self: center;
+  background-color: white;
+  padding: 10px 10px 50px 10px;
+  border: 1px solid #bfbfbf;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8);
+  width: 300px;
+  height: 250px;
+}
+.polaroid img {
+  width: 300px;
+  height: 250px;
+}
+.textoPolaroid {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.seleccionado {
+  font-weight: bolder;
+}
+
+.delete {
+  color: #e53f04;
+}

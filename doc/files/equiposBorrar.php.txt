@@ -1,0 +1,18 @@
+<?php
+
+/**
+* Este archivo elimina un equipo.
+* @param int $id El ID del equipo a eliminar.
+* @return void
+* @access public
+*/
+
+include 'conexionBD.php';
+$con = openCon();
+
+$id = $_GET['id'];
+$sql = "DELETE FROM equipos WHERE id='$id'";
+$eliminar = $con->exec($sql);
+
+header("location:equiposLista.php?");
+

@@ -1,0 +1,39 @@
+<?php
+/**
+ * Abre una conexión a la base de datos utilizando los parámetros especificados en el archivo de configuración.
+ *
+ * @access public
+ *
+ * @return PDO|null Retorna un objeto PDO si se pudo establecer la conexión, o null en caso contrario.
+ *
+ * @throws Exception Si no se pudo establecer la conexión a la base de datos.
+ */
+function openCon()
+{
+    $con = null;
+    $config = parse_ini_file('./config.ini');
+
+    try {
+        $opc = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
+        $dsn = 'mysql:host=' . $config['server'] . ';dbname=' . $config['base'];
+        $con = new PDO($dsn, $config['usu'], $config['pas'], $opc);
+        $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $con;
+    } catch (Exception $ex) {
+        throw $ex;
+    }
+}
+
+/**
+ * Cierra una conexión a la base de datos previamente abierta.
+ *
+ * @access public
+ *
+ * @param PDO $con El objeto PDO que representa la conexión a cerrar.
+ *
+ * @return void
+ */
+function closeCon($con)
+{
+    $con = null;
+}

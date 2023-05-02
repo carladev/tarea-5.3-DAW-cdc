@@ -1,0 +1,14 @@
+APP CLUB DE BALONCESTO:
+    3 TABLAS:
+        - Jugadores (Tabla principal).
+        - Equipos.
+        - Categorias.
+    FORMULARIO: 
+    Al insertar un jugador tendremos un select de equipos y select de categorias.
+
+    LA APP TIENE:
+    1. Login 
+    2. Pantalla principal (Cabecera con las distintas opciones del menu).
+    3. En el extremo superior derecho el usuario que se ha logueado.
+    4. Boton para desconectarte de la sesion.
+
